@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+        .grande{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Cambio de Tamaño" onclick="zoom();">
+    </form>
+    <img id="imagenTrompetas" class="thumb" src="img0001.jpg" alt="">
+
+    <script>
+        function zoom(){
+            var imagenTrompetas=document.getElementById("imagenTrompetas");
+        //Si la variable de la imagen tiene adentro la clase thumb, entonces...
+            if(imagenTrompetas.className == "thumb"){
+                imagenTrompetas.className="thumb grande";
+            }else{
+                imagenTrompetas.className="thumb";
+            }
+        }
+
+    /*  PODEMOS USAR 2 FORMAS DE APLICAR ATRIBUTOS A LO QUE QUERAMOS
+            1) trompetas.setAttribute("class", "thumb grande");
+                el primer parametro, decimos de donde va a sacar los datos
+                el segundo, nos dice  los atributos que le pondremos
+            2) trompetas.className="thumb grande";
+                el parametro nos dice que atributos le pondremos
+    */
+    </script>
+
+</body>
+</html>

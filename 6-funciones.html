@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <script>
+
+//FUNCION PARA DEVOLVER EL NOMBRE CON SALUDO
+function saludo(nombre){
+    document.write("HOLA como estas " + nombre);
+}
+saludo("Bastard");
+
+//FUNCION PARA SUMAR 2 NUMEROS (imprimiendo desde la funcion)
+function suma(numero1, numero2){
+    var s=numero1 + numero2;
+    document.write("<br> La suma de los dos numeros es: " + s);
+}
+suma (2,3);
+
+//FUNCION PARA SUMAR 2 NUMEROS (imprimiendo desde que lo llamamos fuera de la funcion)
+function suma2(numero3, numero4){
+    return numero3 + numero4;
+}
+document.write("<br> La suma de los dos numeros es: " + suma2 (23,35));
+
+//FUNCION PARA SABER CUAL VALOR ES MAS GRANDE
+function numeroMaximo(numero5, numero6){
+    if(numero5 > numero6){
+        return numero5;
+    }else{
+        return numero6;
+    }
+}
+document.write("<br> El numeor mas grande es el: " + numeroMaximo (43,69));
+
+//funcion para ordenar un arreglo de numeros
+function ordenar(arreglo){
+    arreglo= arreglo.sort();
+    return arreglo;
+}
+var arreglo=[2,9,2,6,7];
+document.write("<br> La suma de los dos numeros es: " + ordenar(arreglo));
+
+
+
+
+    </script>
+</body>
+</html>

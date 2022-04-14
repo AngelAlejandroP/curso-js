@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    
+
+    <script>
+
+var arreglo = ["hall","malcom","DIU"];
+
+//agrega un nuevo nombre
+arreglo[arreglo.length] = "Lois";
+arreglo[arreglo.length] = "Riese";
+
+//PUSH = AGREGAR AL ARREGLO
+arreglo.push("angel", "alejandro","esperancita");
+
+//POP = QUITAR ULTIMO ELEMENTO DEL ARREGLO
+arreglo.pop();
+
+//CONCAT = concatena
+arreglo2 = ["yuliza", "eliza","ven y quitate la camisa"];
+array_with = arreglo.concat(arreglo2);
+
+//JOIN = separa con el signo que pongas como parametro
+array_with=array_with.join(", ");
+document.write("Union de arreglo 1 y 2: " + array_with + "<br>");
+
+//SORT = arrelga los elementos en orden alfabetica
+var ordenados= arreglo.sort();
+document.write("Ordenados del arreglo 1: " + ordenados + "<br>");
+
+//imprime la logitud del arreglo
+document.write("EL arreglo tiene: " + array_with.length + " elementos <br>");
+
+
+    </script>
+</body>
+</html>

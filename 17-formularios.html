@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="formulario" method="get">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre: " >
+        <br>
+        <input type="radio" name="sexo" id="hombre" value="Hombre" >Hombre
+        <input type="radio" name="sexo" id="mujer" value="Mujer" >Mujer
+        <br>
+        <input type="checkbox" name="terminos" id="terminos" >Terminos y condiciones
+        <br>
+        <input type="submit" name="btn" id="btn" value="Enviar">
+        <!--
+            submit  =   envia los datos del formulario
+            button  =   es un boton solamente
+        -->
+    </form>
+
+    <script>
+        var formulario1=document.getElementsByName("formulario")[0];
+//----------------------funciones-------------------------------------------
+        function validarNombre(e){
+            if(formulario1.nombre.value==0){
+                alert("Introduzca el campo nombre");
+                e.preventDefault();
+            }
+        }
+        function validarGenero(e){
+            if(formulario1.sexo[0].checked==true || formulario1.sexo[1].checked==true){
+            }else{
+                alert("Completa el campo sexo");
+                e.preventDefault();
+            }
+        }
+        function validarBox(e){
+            if(formulario1.terminos.checked==false){
+                alert("Acepta los terminos");
+                e.preventDefault();
+            }
+        }
+        function validar1(e){
+            validarNombre(e);
+            validarGenero(e);
+            validarBox(e);
+        }
+
+        formulario1.addEventListener("submit",validar1);
+
+/* 
+    documents.forms =trae todos los formularios del documento
+    documents.forms[0] =trae el formulario que le indiques de todos los documentos
+    documents.forms[0].elements =muestra todos los elementos del formulario indicado
+    documents.forms[0].elements[0] =Lo mismo de arriba
+    documents.fomulario =accede al formulario que indiques
+    documents.fomulario.nombre =accede a un elemento del formulario indicado
+
+    focus = sirve para limpiar lo que se a echo sobre algo
+    documents.dormulario.nombre.focus();
+
+    e.preventDefault(); =   sirve para evitar que el formulario envie informaicon
+*/            
+    </script>
+</body>
+</html>

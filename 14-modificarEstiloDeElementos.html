@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+        .grande{
+            width: 400px;
+        }
+        .titulo{
+            border: 1px solid navy;
+            background: #ccc;
+            padding: 10px;
+        }
+        .tituloGrande{
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="encabezado" class="titulo">Hola FUCK Mundo</h1>
+
+    <script>
+        var encabezado=document.getElementById("encabezado");
+        //se pueden agregar estilos de css directamente con javascript
+        encabezado.style.color="grey";
+        encabezado.style.background="black";
+
+        /*
+        .replace = lo usamos, por ejemplo: 
+        cuando tenermos dos clases como atributo;
+        <h1 id="encabezado" class="titulo">Hola FUCK Mundo</h1> 
+        entonces usamos:
+        encabezado.className = encabezado.className.replace("titulogrande", "");
+        el primer parametro es lo que queremos quitar
+        el segundo parametro es, con que lo queremos reemplazar
+        */
+        encabezado.className = encabezado.className.replace("titulogrande", "");
+        
+    </script>
+
+</body>
+</html>

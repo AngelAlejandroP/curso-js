@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .normal{
+            padding: 0px;
+            width: 300px;
+        }
+        .grande{
+            padding: 0px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="button" id="boton1I" class="boton1C" value="Cambiar tamaño"><br>
+    <img src="img0001.jpg" alt="" class="normal" id="imagenI">
+
+    <script>
+
+        var imagen1=document.getElementById("imagenI");
+        var boton1=document.getElementById("boton1I");
+        function cambiar(){
+            if(imagen1.className=="normal"){
+                imagen1.className="grande";
+                console.log("grande");
+            }else{
+                imagen1.className="normal";
+                console.log("pequeño");
+            }
+        }
+        boton1.addEventListener("click",cambiar);
+    </script>
+
+</body>
+</html>

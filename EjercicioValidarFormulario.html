@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET" id="formularioI" name="formularioN">
+        <input type="text" id="textoI" name="textoN" placeholder="escribe tu nombre">
+        <br>
+        <input type="radio" id="generoI" name="generoN" value="Hombre">Hombre
+        <input type="radio" id="generoI" name="generoN" value="Mujer">Mujer
+        <br>
+        <input type="checkbox" id="terminosI" name="terminosN">Aceptar terminos
+        <br>
+        <input type="submit" id="botonI" name="botonN" value="Aceptar">
+    </form>
+
+    <script>
+        var formulario1=document.getElementById("formularioI");
+//---------------------------------------funciones---------------------------------------        
+        function validarNombre(e){
+            if(formulario1.textoI.value==0){
+                alert("Introduce nombre valido");
+                e.preventDefault();
+            }
+        }
+        function validarGenero(e){
+            if(formulario1.generoI[0].checked==true || formulario1.generoI[1].checked==true){
+            }else{
+                alert("Elige sexo");
+                e.preventDefault();
+            }
+        }
+        function validarTerminos(e){
+            if(formulario1.terminosI.checked==false){
+                alert("Tienes que aceptar los terminos");
+                e.preventDefault();
+            }
+        }
+        function validarInformacion(e){
+            validarNombre(e);
+            validarGenero(e);
+            validarTerminos(e);
+        }
+//-------------------------------------realizar evento---------------------------------------
+        formulario1.addEventListener("submit",validarInformacion);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botoncito">Bonton</button>
+    <input type="text" id="input">
+    <script>
+// ------------------FUNCIONES--------------------------        
+            function saludo(){
+                alert("HOLA MUNDO");
+            }
+            function mensaje(){
+                console.log("Usuario no se si este disponible");
+            }
+            function tipoFuncion(e){
+                console.log("Este evento es de tipo: " + e.type);
+        /*      console.log("Este evento es de tipo: " + e.target);
+        para saber de que tipo es donde se aplicara el evento       */
+            }
+// ------------------VARIABLES PARA LLAMAR--------------------------
+            //click = se ejecuta cuando alla un clic
+            var boton1=document.getElementById("botoncito");
+            boton1.addEventListener("click", saludo);
+            //change = cuando hay un cambio dentro de donde se aplica
+            
+            var boton2=document.getElementById("input");
+            boton2.addEventListener("change",mensaje);
+
+            var boton3=document.getElementById("botoncito");
+            boton3.addEventListener("click",tipoFuncion);
+
+//si queremos eliminar un evento del script colocamos
+            //boton1.removeEventListener("click",saludo);
+        
+    </script>
+</body>
+</html>

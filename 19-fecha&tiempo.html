@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: url("img0002.jpg");
+            background-size: cover;
+        }
+        .wrap{
+            width: 90%;
+            max-width: 1000px;
+        }
+        .widget{
+            width: 40%;
+            margin: 32px;
+        }
+        .widget p{
+            display: inline-block;
+            line-height: 1em;
+        }
+        .fecha{
+            text-align: center;
+            font-size: 1.5em;
+            background: rgba(0,0,0,.5);
+            padding: 20px;
+            width: 100%;
+        }
+        .reloj{
+            width: 100%;
+            padding: 20px;
+            font-size: 4em;
+            text-align: center;
+            background: rgba(0,0,0,.5);
+        }
+        .reloj .cajaSegundos{
+            display: inline-block;
+        }
+        .reloj .ampmC,
+        .reloj .segundoC{
+            font-size: 2rem;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapI" class="wrap">
+        <div id="widgetI" class="widget">
+            <div id="fechaI" class="fecha">
+                <p class="diaC" id="diaI">lunes</p>
+                <p class="diaNumeroC" id="diaNumeroI">1</p>
+                <p class="mesC" id="mesI">12</p>
+                <p class="anioC" id="anioI">2020</p>
+            </div>
+            <div id="relojI" class="reloj">
+                <p class="horaC" id="horaI">2</p>
+                <p class="minutoC" id="minutoI">22</p>
+                <div id="cajaSegundosI" class="cajaSegundos">
+                    <p class="ampmC" id="ampmI">pm</p>
+                    <p class="segundoC" id="segundoI">02</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script>
+        function reloj(){
+            var fecha=new Date();
+           
+            var dia     =   fecha.getDay();
+            var diaNum  =   fecha.getDate();
+            var mes     =   fecha.getMonth();
+            var anio    =   fecha.getFullYear(); 
+            var hora    =   fecha.getHours();
+            var minuto  =   fecha.getMinutes();
+            var ampm;
+            var segundo =   fecha.getSeconds();
+  
+            var pDia     =   document.getElementById("diaI");
+            var pDiaNum  =   document.getElementById("diaNumeroI");
+            var pMes     =   document.getElementById("mesI");
+            var pAnio    =   document.getElementById("anioI");
+            var pHora    =   document.getElementById("horaI");
+            var pMinuto  =   document.getElementById("minutoI");
+            var pampm    =   document.getElementById("ampmI");
+            var pSegundo =   document.getElementById("segundoI");
+            
+            var dia=["Lunes","Martes","Miercoles","Jueves","Sabado","Domingo"];
+            var mes=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+            
+
+        }
+        reloj();
+    </script>
+</body>
+</html>

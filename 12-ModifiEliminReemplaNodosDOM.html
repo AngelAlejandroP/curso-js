@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="">Anahi Rodriguez Machuca</li>
+        <li id="">Angel Alejandro Perez Acosta</li>
+        <li id="">Pedro Perez Pereida</li>
+    </ol>
+
+    <script>
+        var elemento1=document.createElement("li");
+        var texto1=document.createTextNode("Rouse Milky");
+        elemento1.appendChild(texto1);
+//MODIFICAR-----------------------------------------------------------------------
+        var elementoDeLista=document.getElementsByTagName("li")[0];
+        /* Puedes usar        
+        innnerHTML = cambias el texto y puedes introducir codigo html
+        textContent = solo reemplaza el texto                      */
+        elementoDeLista.innerHTML="Texto <b>de</b> remplazo";
+ //REEMPLAZAR--------------------------------------------------------------------*/
+        var padre1=document.getElementsByTagName("li")[0].parentNode;
+        var referencia1=document.getElementsByTagName("li")[0];
+        padre1.replaceChild(elemento1,referencia1);
+//ELIMINAR-------------------------------------------------------------------------
+        var padre2=document.getElementsByTagName("li")[0].parentNode;
+        var referencia2=document.getElementsByTagName("li")[1];
+        padre2.removeChild(referencia2);
+
+
+    </script>
+
+
+</body>
+</html>

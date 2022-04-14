@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    
+    <h1>Espacio de trabajo</h1>
+    <script>
+
+var nombre;
+nombre = prompt("Ingresa tu nombre");
+edad = prompt("Ingresa edad");
+
+document.write(nombre + "<br>");
+document.write(edad + "<br>");
+
+//para poner doble comilla en un texto
+var texto1 = 'Hola "Felicidades"' + "<br>";
+var texto2 = "Hola \"Felicidades\"" + "<br>";
+
+document.write(texto1 + texto2);
+
+//ARREGLOS-------------------------------
+
+var arreglo=["Anahi","Angel","Alejandro",22,true];
+document.write(arreglo[1] + "<br>");
+
+//OBJETOS---------------------------------
+
+var objeto={
+    color: "Black",
+    size: 12
+};
+
+//VALOR INDEFINIDO Undefined--------------
+
+var loquesea;//no tiene un valor definido
+
+//NULL------------------------------------
+
+var numeroNULL = 10;
+var numeroNULL = null;
+
+//NaN-------------------------------------
+//esto es un valor invalido
+
+//alert =   nos muestra una alerta en pantalla
+// alert(nombre_variable);
+
+//prop  =   nos muestra una caje para escribir y aceptar
+// variable = prompt("texto_de_la_caja","mensaje_escrito_opcional");
+
+//document  =   es el espacio de trabajo, el body de nuestrapagina html
+//documente.write(nombre_variable);
+
+//console   =   muestra el resulado en la consola (solo se ve en la consola-herramientas de desarrollador)
+//console(nombre_variable);
+    </script>
+</body>
+</html>

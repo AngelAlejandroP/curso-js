@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: rgba(240, 240, 240);
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="contenedor">
+        <div class="">contenedor 1</div>
+        <div class="">contenedor 2</div>
+    </section>
+
+    <script>
+        var elemento1=document.createElement("div");
+        var texto1=document.createTextNode("contenedor 3");
+        elemento1.appendChild(texto1);
+
+        var padre1=document.getElementById("contenedor");
+        var referencia1=document.getElementsByTagName("div")[0];
+        padre1.insertBefore(elemento1,referencia1);
+
+    </script>
+</body>
+</html>

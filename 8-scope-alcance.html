@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    var varGlobal = "Variable Global";
+
+    function mifuncion1(){
+        var varLocal1 ="Variable local uno";
+        alert(varLocal1);
+
+        function miFuncion2(){
+            var varLocal2="Variable local dos";
+            alert(varLocal2);
+        }
+        miFuncion2();
+
+    }
+    mifuncion1();
+
+/*
+El scope es el alcance de una variable, puede ser de dos tipos, 
+global y local. Una variable cuyo scope es global se puede 
+acceder desde cualquier parte del código, una local solo 
+desde la función que la contiene.
+*/
+</script>
+
+
+
+
+</body>
+</html>

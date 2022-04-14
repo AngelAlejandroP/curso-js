@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Anahi Rodriguez Machuca</li>
+        <li>Angel Alejandro Perez Acosta</li>
+    </ol>
+    <script>
+        /*getElementByTagName = trae todos los elementos con el tag requerido (en este caso "li")
+        document.getElementByTagName("li");             */
+
+        /*parentNode = trae de donde pertenecen los elementos seleccionados
+        .parentNode                                     */
+
+//FORMA 1---------------------------------------------------
+        var elemento1=document.createElement("li");
+        var contenido1=document.createTextNode("Otro Gato XD");
+        elemento1.appendChild(contenido1);
+        //cuando no conocemos donde pertenece los elementos lista
+        var padre1=document.getElementsByTagName("li")[0].parentNode; 
+        padre1.appendChild(elemento1);
+//FORMA 2---------------------------------------------------
+        var elemento2=document.createElement("li");
+        var contenido2=document.createTextNode("Otro gato mas XD");
+        elemento2.appendChild(contenido2);
+        // para hacerlo directamente conociendo el nombre del contenedor de la lista
+        var padre2=document.getElementById("lista");
+        padre2.appendChild(elemento2);
+//FORMA 3---------------------------------------------------
+        var elemento3=document.createElement("li");
+        var contenido3=document.createTextNode("Otro Gatotote bebé");
+        elemento3.appendChild(contenido3);
+
+        document.getElementById("lista").appendChild(elemento3);
+//FORMA 1-Agregar en lugar que tu quieras----------------------
+        var elemento4=document.createElement("li");
+        var contenido4=document.createTextNode("Laura se fue");
+        elemento4.appendChild(contenido4);
+
+        var padre4=document.getElementsByTagName("li")[0].parentNode; 
+        var primerElemento=document.getElementsByTagName("li")[0];
+        padre4.insertBefore(elemento4,primerElemento);
+
+        
+    </script>
+</body>
+</html>
